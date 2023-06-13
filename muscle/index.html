@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>rychlá auta</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styly.css">
+  <style>
+    body {
+      animation: changeBackground 10s infinite;
+      animation-timing-function: linear;
+    }
+
+    @keyframes changeBackground {
+      0% {
+        background-color: red;
+      }
+
+      20% {
+        background-color: blue;
+      }
+
+      40% {
+        background-color: yellow;
+      }
+
+      60% {
+        background-color: green;
+      }
+
+      80% {
+        background-color: orange;
+      }
+
+      100% {
+        background-color: red;
+      }
+    }
+
+    .carousel-item img {
+      max-height: 650px;
+      /* Maximální výška obrázku */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      object-fit: contain;
+    }
+
+    h1 {
+      color: red;
+      text-align: center;
+      padding: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      /* Přidání stínu nadpisu */
+    }
+
+    h2 {
+      color: black;
+      text-align: center;
+      padding: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      /* Přidání stínu nadpisu */
+    }
+
+    p {
+      color: black;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      display: none;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .col-3 {
+      flex: 0 0 25%;
+    }
+
+    .col-6 {
+      flex: 0 0 50%;
+    }
+
+    .left-image,
+    .right-image {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .left-image {
+      align-items: start;
+      align-content: start;
+    }
+  </style>
+</head>
+
+<body>
+  <audio id="background-audio" src="../zvuky/kuba_neumi_auto.mp3" loop></audio>
+  <header>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" id="navigace" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a href="../index.html" class="nav-link" data-bs-toggle="tab">Úvod</a>
+      </li>
+      <li class="nav-item">
+        <a href="../hypersport/index.html" class="nav-link" data-bs-toggle="tab">Hypersport</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a href="../supersport/index.html" class="nav-link" data-bs-toggle="tab" >Supersport</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a href="./index.html" class="nav-link active" data-bs-toggle="tab" aria-current="page">Muscle</a>
+      </li>
+    </ul>
+  </header>
+  <main>
+    <div class="container">
+      <h1>Muscle auta</h1>
+      <div class="row">
+        <div class="col-3">
+          <img src="../img/viki" alt="Obrázek 1" class="left-image img-fluid">
+        </div>
+        <div class="col-6">
+          <p>Muscle auta jsou americké výkonné a silné automobily, které získaly popularitu zejména v 60. a 70. letech
+            20. století. Tyto automobily se vyznačují agresivním designem, silnými motory a vysokým výkonem.
+
+            Muscle auta často disponují velkými objemy motorů, které produkují vysoký výkon a nabízejí rychlostní
+            potenciál. Typickými zástupci jsou například Chevrolet Camaro, Ford Mustang, Dodge Challenger a Plymouth
+            Barracuda.
+
+            Tyto vozy byly oblíbené zejména mezi mladšími generacemi a lidmi, kteří hledali výkonná a sportovní vozidla.
+            V důsledku ropné krize a rostoucích požadavků na úsporu paliva se popularita muscle aut postupně snížila.
+
+            Nicméně, v posledních letech se zájem o muscle auta obnovil. Některé automobilky představily moderní verze
+            klasických modelů, které kombinují retro design s moderní technologií a výkonem. Tyto nové generace muscle
+            aut získávají zájem automobilových nadšenců a sběratelů po celém světě.</p>
+        </div>
+        <div class="col-3">
+          <img src="../img/david" alt="Obrázek 2" class="right-image img-fluid">
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <button class="btn btn-primary" onclick="toggleAudio()">Přehrát zvuk</button>
+    </div>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+    crossorigin="anonymous"></script>
+  <!-- (Optional) - Place this js code after initializing bootstrap.bundle.min.js -->
+  <script>
+    var audio = document.getElementById('background-audio');
+
+    function toggleAudio() {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  </script>
+</body>
+
+</html>
